@@ -25,14 +25,15 @@ app.get('/', (req, res) => {
 });
 
 // Only one route
-app.post('/server/generate_project', async (req, res) => {
+app.post('/api/generate_project', async (req, res) => {
   try {
     await handler(req, res);
   } catch (err) {
-    console.error("❌ Error in /server/generate_project route:", err);
+    console.error("❌ Error in /api/generate_project route:", err);
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
+
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
