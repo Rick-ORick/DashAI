@@ -46,11 +46,12 @@ function GettingStarted() {
     setMessageVisible(false);
 
     try {
-      const response = await fetch("http://localhost:3001/server/generate_project", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ mode: activeTab, ...formValues })
-      });
+const response = await fetch("/api/generate_project", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ mode: activeTab, ...formValues })
+});
+
 
       const data = await response.json();
       console.log("Raw API Response:", data); // Log raw data to check if it's being returned correctly
