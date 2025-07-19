@@ -11,11 +11,13 @@ function GettingStarted() {
   const [formValues, setFormValues] = useState({ project: "" });
   const [showGif, setShowGif] = useState(false);
   const [resultsVisible, setResultsVisible] = useState(false);
-  //const [formActiveTab, setFormActiveTab] = useState("none");
-  //const [messageVisible, setMessageVisible] = useState(false);
   const [aiResults, setAiResults] = useState(null);
   const [modalImg, setModalImg] = useState(null);
-  //const [loading, setLoading] = useState(false);
+
+  // Declare missing state variables
+  const [loading, setLoading] = useState(false); // For setLoading
+  const [formActiveTab, setFormActiveTab] = useState("none"); // For setFormActiveTab
+  const [messageVisible, setMessageVisible] = useState(false); // For setMessageVisible
 
   // Reference for the search bar (bottom bar section)
   const searchBarRef = useRef(null);
@@ -46,12 +48,11 @@ function GettingStarted() {
     setMessageVisible(false);
 
     try {
-const response = await fetch("/api/generate_project", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ mode: activeTab, ...formValues })
-});
-
+      const response = await fetch("/api/generate_project", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ mode: activeTab, ...formValues })
+      });
 
       const data = await response.json();
       console.log("Raw API Response:", data); // Log raw data to check if it's being returned correctly
@@ -200,4 +201,5 @@ const response = await fetch("/api/generate_project", {
     </div>
   );
 }
+
 export default GettingStarted;
