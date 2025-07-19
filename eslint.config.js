@@ -1,9 +1,8 @@
-// eslint.config.js
-const { defineConfig } = require('eslint');
-const globals = require('globals');
-const pluginReact = require('eslint-plugin-react');
+import { defineConfig } from 'eslint';
+import globals from 'globals';
+import pluginReact from 'eslint-plugin-react';
 
-module.exports = defineConfig({
+export default defineConfig({
   overrides: [
     {
       files: ['**/*.{js,mjs,cjs,jsx}'],
@@ -15,8 +14,8 @@ module.exports = defineConfig({
         'plugin:react/recommended',
       ],
       parserOptions: {
-        ecmaVersion: 2020, // Ensure ECMAScript version is set
-        sourceType: 'module', // Ensure we're using ESM
+        ecmaVersion: 2020,
+        sourceType: 'module',
       },
       env: {
         browser: true,
@@ -27,7 +26,7 @@ module.exports = defineConfig({
         ...globals.node,
       },
       rules: {
-        'no-unused-vars': 'warn', // Example of custom rule
+        'no-unused-vars': 'warn', // Example rule to catch unused variables
       },
     },
   ],
