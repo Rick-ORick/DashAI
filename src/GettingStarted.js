@@ -199,5 +199,4 @@ function GettingStarted() {
     </div>
   );
 }
-
 export default GettingStarted;
