@@ -1,8 +1,8 @@
-import { defineConfig } from 'eslint';
-import globals from 'globals';
-import pluginReact from 'eslint-plugin-react';
+const { defineConfig } = require('eslint');
+const globals = require('globals');
+const pluginReact = require('eslint-plugin-react');
 
-export default defineConfig({
+module.exports = defineConfig({
   overrides: [
     {
       files: ['**/*.{js,mjs,cjs,jsx}'],
