@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom"; // ✅ import navigate
 import "./App.css";
 import "@fontsource/montserrat/700.css";
-import GettingStarted from './GettingStarted.js';
+import GettingStarted from './Getting_Started.js';
 
 
 
