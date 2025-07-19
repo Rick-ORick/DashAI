@@ -1,33 +1,30 @@
-const { defineConfig } = require('eslint');
-const globals = require('globals');
-const pluginReact = require('eslint-plugin-react');
+import { ESLint } from 'eslint';
+import pluginReact from 'eslint-plugin-react';
+import globals from 'globals';
 
-module.exports = defineConfig({
-  overrides: [
-    {
-      files: ['**/*.{js,mjs,cjs,jsx}'],
-      plugins: {
-        react: pluginReact,
-      },
-      extends: [
-        'eslint:recommended',
-        'plugin:react/recommended',
-      ],
+const config = [
+  {
+    files: ["**/*.{js,jsx,mjs,cjs}"],
+    languageOptions: {
       parserOptions: {
-        ecmaVersion: 2020,
-        sourceType: 'module',
-      },
-      env: {
-        browser: true,
-        node: true,
+        ecmaVersion: 2020, // or 2021/2022 depending on your requirements
+        sourceType: 'module', // for ES modules
       },
       globals: {
         ...globals.browser,
         ...globals.node,
       },
-      rules: {
-        'no-unused-vars': 'warn', // Example rule to catch unused variables
-      },
     },
-  ],
-});
+    plugins: {
+      react: pluginReact,
+    },
+    rules: {
+      'react/jsx-uses-react': 'off', // React 17+ doesn't need this anymore
+      'react/react-in-jsx-scope': 'off', // React 17+ doesn't require this either
+      'no-console': 'warn', // Adjust to your needs
+      'no-unused-vars': 'warn', // Adjust to your needs
+    },
+  },
+];
+
+export default config;
