@@ -11,11 +11,11 @@ function GettingStarted() {
   const [formValues, setFormValues] = useState({ project: "" });
   const [showGif, setShowGif] = useState(false);
   const [resultsVisible, setResultsVisible] = useState(false);
-  const [formActiveTab, setFormActiveTab] = useState("none");
-  const [messageVisible, setMessageVisible] = useState(false);
+  //const [formActiveTab, setFormActiveTab] = useState("none");
+  //const [messageVisible, setMessageVisible] = useState(false);
   const [aiResults, setAiResults] = useState(null);
   const [modalImg, setModalImg] = useState(null);
-  const [loading, setLoading] = useState(false);
+  //const [loading, setLoading] = useState(false);
 
   // Reference for the search bar (bottom bar section)
   const searchBarRef = useRef(null);
