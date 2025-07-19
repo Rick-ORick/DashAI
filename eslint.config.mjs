@@ -2,13 +2,13 @@ import { ESLint } from 'eslint';
 import pluginReact from 'eslint-plugin-react';
 import globals from 'globals';
 
-const config = [
+export default [
   {
     files: ["**/*.{js,jsx,mjs,cjs}"],
     languageOptions: {
       parserOptions: {
-        ecmaVersion: 2020, // or 2021/2022 depending on your requirements
-        sourceType: 'module', // for ES modules
+        ecmaVersion: 2020,
+        sourceType: 'module',
       },
       globals: {
         ...globals.browser,
@@ -19,12 +19,10 @@ const config = [
       react: pluginReact,
     },
     rules: {
-      'react/jsx-uses-react': 'off', // React 17+ doesn't need this anymore
-      'react/react-in-jsx-scope': 'off', // React 17+ doesn't require this either
-      'no-console': 'warn', // Adjust to your needs
-      'no-unused-vars': 'warn', // Adjust to your needs
+      'react/jsx-uses-react': 'off',
+      'react/react-in-jsx-scope': 'off',
+      'no-console': 'warn',
+      'no-unused-vars': 'warn',
     },
   },
 ];
-
-export default config;
