@@ -11,7 +11,7 @@ root.render(
     <Router>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/gettingstarted" element={<GettingStarted />} />
+        <Route path="/gettingstarted" element={<Getting_Started />} />
       </Routes>
     </Router>
   </React.StrictMode>
