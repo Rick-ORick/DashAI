@@ -2,7 +2,6 @@
   "name": "dashai-app",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
   "dependencies": {
     "@fontsource/montserrat": "^5.2.6",
     "@testing-library/dom": "^10.4.0",
@@ -15,22 +14,16 @@
     "express": "^5.1.0",
     "node-fetch": "^3.3.2",
     "openai": "^5.10.1",
-    "react": "^19.1.0",
-    "react-dom": "19.1.0",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1",
     "react-router-dom": "^6.30.1",
-    "react-scripts": "^5.0.0",
     "web-vitals": "^2.1.4",
     "youtube-search-api": "^2.0.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.31.0",
     "concurrently": "^8.2.2",
-    "eslint": "^8.57.1",
-    "eslint-plugin-react": "^7.37.5",
     "globals": "^16.3.0",
-    "@babel/core": "^7.28.0", 
-    "@babel/preset-env": "^7.28.0",  
-    "@babel/preset-react": "^7.27.1"  
+    "react-scripts": "^0.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -39,27 +32,6 @@
     "eject": "react-scripts eject",
     "server": "node api/server.js",
     "dev": "concurrently \"npm:start\" \"npm run server\""
-  },
-  "eslintConfig": {
-    "extends": [
-      "eslint:recommended",
-      "plugin:react/recommended"
-    ],
-    "parserOptions": {
-      "ecmaVersion": 2020,
-      "sourceType": "module"
-    },
-    "env": {
-      "browser": true,
-      "node": true
-    },
-    "globals": {
-      "window": "readonly",
-      "document": "readonly"
-    },
-    "rules": {
-      "no-unused-vars": "warn"
-    }
   },
   "browserslist": {
     "production": [
@@ -72,5 +44,19 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rick-ORick/DashAI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Rick-ORick/DashAI/issues"
+  },
+  "homepage": "https://github.com/Rick-ORick/DashAI#readme"
 }
