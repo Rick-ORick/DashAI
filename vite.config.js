@@ -5,7 +5,10 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      input: 'index.html', // Ensure Vite knows about the correct entry point
+      input: 'index.html', // Ensure this is correct
     },
+  },
+  esbuild: {
+    jsx: 'react', // This enables JSX parsing for .js files
   },
 });
