@@ -5,7 +5,6 @@ import "@fontsource/montserrat/700.css";
 import GettingStarted from './Getting_Started.js';
 
 
-
 function App() {
   const [barAnimated, setBarAnimated] = useState(false);
   const [contentVisible, setContentVisible] = useState(false);
