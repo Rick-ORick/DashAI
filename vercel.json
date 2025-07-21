@@ -16,7 +16,7 @@
       "dest": "/api/server.js"
     },
     {
-      "src": "/(.*)",
+      "src": "App.jsx",
       "dest": "/main.jsx"
     }
   ]
