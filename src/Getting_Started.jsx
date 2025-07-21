@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./src/Getting_Started.css";
+import "./Getting_Started.css";
 import "@fontsource/montserrat/700.css";
 import { Link } from "react-router-dom";
 
