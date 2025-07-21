@@ -89,7 +89,7 @@ export default async function handler(req, res) {
 
     res.status(200).json(result);
   } catch (err) {
-    console.error("❌ Error in generate_project.js:", err);
+    console.error("❌ Error in generate.js:", err);
     res.status(500).json({ error: "AI or media generation failed." });
   }
 }
