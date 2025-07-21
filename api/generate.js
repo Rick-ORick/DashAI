@@ -1,5 +1,4 @@
-
-import handler from './generate.js';
+import handler from './Generate_Project.js';
 
 export default async function(req, res) {
   if (req.method === 'POST') {
