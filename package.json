@@ -11,7 +11,7 @@
     "dev": "vite",
     "start": "vite",
     "server": "node api/server.js",
-    "build": "vite build",
+    "build": "vite build --debug",
     "preview": "vite preview"
   },
   "dependencies": {
