@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      input: 'index.html', // Ensure this is correct
+      input: 'main.jsx', // Ensure this is correct
     },
   },
   esbuild: {
