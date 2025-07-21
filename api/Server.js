@@ -34,8 +34,11 @@ app.post('/api/generate_project', async (req, res) => {
   }
 });
 
+// Export the app for Vercel serverless function
+export default app;
 
-const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => {
-  console.log(`✅ Server running at http://localhost:${PORT}`);
-});
+// Start the server if not using serverless (for local testing)
+// const PORT = process.env.PORT || 3001;
+// app.listen(PORT, () => {
+//   console.log(`✅ Server running at http://localhost:${PORT}`);
+// });
