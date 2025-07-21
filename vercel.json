@@ -18,6 +18,10 @@
     {
       "src": "/(.*)",
       "dest": "/index.html"
+    },
+    {
+      "src": "/dist/(.*)",
+      "dest": "/dist/$1"  // Ensure Vercel serves built assets from the dist folder
     }
   ]
 }
