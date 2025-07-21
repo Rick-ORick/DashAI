@@ -17,7 +17,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/dist/App.jsx"
+      "dest": "/dist/index.html"
     }
   ]
 }
