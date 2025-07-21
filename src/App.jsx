@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom"; // ✅ import navigate
 import "./App.css";
 import "@fontsource/montserrat/700.css";
-import GettingStarted from './Getting_Started.js';
+import GettingStarted from './Getting_Started.jsx';
 
 
 function App() {
@@ -64,9 +64,10 @@ function App() {
             designed to help facilitate your content creation routine<br />
             in a simple and easy way. Get started today!
           </h1>
-          <button className="start-button" onClick={() => navigate("/gettingstarted")}>
-            Start
-          </button>
+         <button className="start-button" onClick={() => {
+    console.log('Navigating to /gettingstarted');
+    navigate("/gettingstarted");
+}}>Start</button>
         </div>
       </div>
 
