@@ -28,7 +28,7 @@ const fetchGoogleSearchResults = async (query) => {
 
   try {
     const response = await axios.get(url);
-    console.log("Google API Response:", response.data);  // Log the full response to check for any issues
+    console.log("Google API Response:", response.data);
     return response.data.items || [];
   } catch (error) {
     console.error("❌ Error fetching Google Search results:", error);
@@ -43,7 +43,6 @@ export default async function handler(req, res) {
   const result = { sources: [], stock: [], videos: [], tip: "" };
 
   try {
-    // Tip via OpenAI
     const tipPrompt = `Give two helpful, creative sentences on how someone should approach creating the following media project: "${project}". Tone: friendly but smart. End with a suggested more specific search.`;
     const tipResp = await openai.chat.completions.create({
       model: "gpt-4",
@@ -52,7 +51,6 @@ export default async function handler(req, res) {
     });
     result.tip = tipResp.choices[0].message.content.trim();
 
-    // Google Custom Search API
     const sources = await fetchGoogleSearchResults(project);
     result.sources = sources.map((src) => ({
       title: src.title,
@@ -60,7 +58,6 @@ export default async function handler(req, res) {
       description: src.snippet || src.title,
     }));
 
-    // Unsplash Images
     const imgRes = await fetch(
       `https://api.unsplash.com/photos/random?query=${encodeURIComponent(project)}&count=10&client_id=${process.env.UNSPLASH_ACCESS_KEY}`
     );
@@ -73,7 +70,6 @@ export default async function handler(req, res) {
       }));
     }
 
-    // YouTube Tutorials
     const { default: ytSearch } = await import("youtube-search-api");
     const ytJson = await ytSearch.GetListByKeyword(`${project} tutorial`, false, 20, [{ type: "video" }]);
     if (ytJson.items) {
