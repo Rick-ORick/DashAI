@@ -48,11 +48,16 @@ function GettingStarted() {
     setMessageVisible(false);
 
     try {
-      const response = await fetch("/api/generate_project", {
+      const response = await fetch("/api/generate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ mode: activeTab, ...formValues })
       });
+
+      if (!response.ok) {
+  const text = await response.text(); // try reading raw
+  throw new Error(`API failed with status ${response.status}: ${text}`);
+}
 
       const data = await response.json();
       console.log("Raw API Response:", data); // Log raw data to check if it's being returned correctly
