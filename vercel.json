@@ -17,7 +17,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/dist/assets/main.js"
+      "dest": "/dist/main.jsx"
     }
   ]
 }
