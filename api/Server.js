@@ -3,7 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import handler from './Generate_Project.jsx';
+import handler from './Generate_Project.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 dotenv.config({ path: path.resolve(__dirname, '../.env') });
@@ -25,11 +25,11 @@ app.get('/', (req, res) => {
 });
 
 // Only one route
-app.post('/api/generate_project', async (req, res) => {
+app.post('/api/generate', async (req, res) => {
   try {
     await handler(req, res);
   } catch (err) {
-    console.error("❌ Error in /api/generate_project route:", err);
+    console.error("❌ Error in /api/generate route:", err);
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
