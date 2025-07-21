@@ -8,7 +8,7 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "dev": "run-p start server",
+    "dev": "vite"
     "start": "vite",
     "server": "node api/server.js",
     "build": "vite build",
