@@ -17,7 +17,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/App.jsx"
+      "dest": "/main.jsx"
     }
   ]
 }
