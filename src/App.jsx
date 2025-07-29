@@ -50,7 +50,7 @@ function App() {
             className="shape-bg"
           />
           <img
-            src="1logo.png"
+            src="public/1logo.png"
             alt="DashAI logo"
             className="logo"
           />
