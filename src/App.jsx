@@ -34,23 +34,23 @@ function App() {
         </button>
 
         <img
-          src="https://github.com/Rick-ORick/Dash/blob/main/star.gif?raw=true"
+          src="star.gif"
           alt="Star"
           className="corner-star"
         />
         <img
-          src="https://github.com/Rick-ORick/Dash/blob/main/shooting.gif?raw=true"
+          src="shooting.gif"
           alt="Star"
           className="left-star"
         />
         <div className="logo-wrapper">
           <img
-            src="https://github.com/Rick-ORick/Dash/blob/main/shape.png?raw=true"
+            src="1shape.png"
             alt="shape background"
             className="shape-bg"
           />
           <img
-            src="https://github.com/Rick-ORick/Dash/blob/main/logo.png?raw=true"
+            src="1logo.png"
             alt="DashAI logo"
             className="logo"
           />
